@@ -1,0 +1,31 @@
+{
+  "name": "vivara-ipad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint cypress/e2e/*.cy.js",
+    "lint:fix": "eslint cypress/**/**.js --fix",
+    "cy:open": "cypress open",
+    "test": "cypress run",
+    "format": "prettier --write \"cypress/**/*.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "13.0",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-cypress": "^2.15.1",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.1.0"
+  },
+  "env": {
+    "viewportConfig": "iphone12"
+  },
+  "dependencies": {
+    "cypress-plugin-xhr-toggle": "^1.0.0",
+    "fs": "^0.0.1-security"
+  }
+}

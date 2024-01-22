@@ -1,21 +1,20 @@
-# Vivara Responsivo - Ipad
+# Automação API - Vtex
 
 Este é o projeto de estudo em automação Responsiva.
 
 ## Descrição do Projeto
 
-- O projeto de testes de automação responsiva tem como objetivo validar as principais funções e telas do sistema, 
- garantindo a mais alta qualidade possível do produto. Os testes incluem a verificação de estilos, cores e 
- formatações CSS em cada página, garantindo consistência visual em todo o sistema.
+- Projeto de testes de automação de API vtex, que tem como objetivo, 
+ ampliar o conhecimento das APIs vtex.
 
 ### Instalação e Pré-Requisitos
 
-#### Pré-requisitos:
 - NodeJS.
 - Editor de Texto (Vscode, Atom, Notepad++, Sublime, etc...)
 - NPM
 - git
 - Instalar as dependencias do projeto: npm i
+- Editar o arquivo cypress_exemplo.env.json para cypress.env.json e inserir seus dados
 
 ### Execução dos testes
 

@@ -1,5 +1,5 @@
 Cypress.Commands.add('generateAndValidateToken', (username, password) => {
-  cy.request({
+  cy.api({
     method: 'POST',
     url: 'https://secure.vivara.com.br/api/vtexid/pub/authentication/startlogin',
     headers: {
@@ -20,7 +20,7 @@ Cypress.Commands.add('generateAndValidateToken', (username, password) => {
       .find((cookie) => cookie.startsWith('_vss='))
       .split(';')[0]
 
-    cy.request({
+    cy.api({
       method: 'POST',
       url: 'https://secure.vivara.com.br/api/vtexid/pub/authentication/classic/validate',
       headers: {

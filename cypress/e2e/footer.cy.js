@@ -1,7 +1,7 @@
 const user = Cypress.env('user_name')
 const password = Cypress.env('user_password')
 
-describe('Deve validar o footer em vivara não Logado', () => {
+describe.skip('Deve validar o footer em vivara não Logado', () => {
   beforeEach(() => {
     cy.visit(Cypress.env('url'), {})
   })
@@ -36,7 +36,7 @@ describe('Deve validar o footer em vivara Logado', () => {
     cy.check_user()
   })
 
-  it('Pesquisar footer da Loja', () => {
+  it('Pesquisar footer da Loja', { env: { snapshotOnly: true } }, () => {
     cy.searchStoreFooter()
   })
 

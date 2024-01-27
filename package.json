@@ -1,5 +1,5 @@
 {
-  "name": "vivara-ipad",
+  "name": "cypress_api_vtex",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "format": "prettier --write \"cypress/**/*.js\""
   },
   "keywords": [],
-  "author": "",
+  "author": "Gerson Dias",
   "license": "ISC",
   "devDependencies": {
     "cypress": "13.0",
@@ -21,10 +21,8 @@
     "eslint-plugin-prettier": "^5.0.1",
     "prettier": "^3.1.0"
   },
-  "env": {
-    "viewportConfig": "iphone12"
-  },
   "dependencies": {
+    "cypress-plugin-api": "^2.11.1",
     "cypress-plugin-xhr-toggle": "^1.0.0",
     "fs": "^0.0.1-security"
   }

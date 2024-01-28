@@ -54,13 +54,6 @@ Cypress.Commands.add('footer', () => {
     .should('be.visible')
     .should('have.css', 'background-color', 'rgb(254, 237, 228)')
 
-  //Estes componentes foram removidos do footer
-
-  // cy.get(footerPg.text_develop)
-  //   .should('exist')
-  //   .should('be.visible')
-  //   .should('have.text', 'Desenvolvidor por:')
-
   cy.get(footerPg.text_infos_footer)
     .should('exist')
     .should('be.visible')

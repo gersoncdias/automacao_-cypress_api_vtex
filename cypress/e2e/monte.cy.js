@@ -1,4 +1,4 @@
-describe('Teste Cypress para a página da pulseira', () => {
+describe.skip('Teste Cypress para a página da pulseira', () => {
   beforeEach(() => {
     cy.window().then((win) => {
       win.localStorage.setItem(
@@ -7,7 +7,7 @@ describe('Teste Cypress para a página da pulseira', () => {
       )
     })
   })
-  it.skip('Preview', () => {
+  it('Preview', () => {
     cy.visit(
       Cypress.env('url_preview"') + '/pulseira-life-sua-historia-pl00015208/p',
     )

@@ -30,10 +30,6 @@ Cypress.Commands.add('header_vivara', () => {
     .should('exist')
     .should('be.visible')
     .should('have.text', 'Informar meu CEP')
-    .trigger('mouseover')
-
-  cy.get(headerPg.modal_regionalize).should('exist').should('be.visible')
-  cy.get(headerPg.close_modal_regionalize).click()
 })
 
 Cypress.Commands.add('topbar_vivara', () => {

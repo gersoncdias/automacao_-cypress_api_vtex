@@ -29,15 +29,17 @@ describe('Deve validar o Header Vivara não Lagado', () => {
     cy.topbar_vivara()
   })
 })
-it('Em Quiz', () => {
-  cy.visit(`${Cypress.env('url')}${Cypress.env('quiz')}`)
-  cy.header_vivara()
-  cy.topbar_vivara()
-})
-it('Em Relogio', () => {
-  cy.visit(`${Cypress.env('url')}${Cypress.env('relogio')}`)
-  cy.header_vivara()
-  cy.topbar_vivara()
+describe('Deve validar o Header em outras paginas', () => {
+  it('Em Quiz', () => {
+    cy.visit(`${Cypress.env('url')}${Cypress.env('quiz')}`)
+    cy.header_vivara()
+    cy.topbar_vivara()
+  })
+  it('Em Relogio', () => {
+    cy.visit(`${Cypress.env('url')}${Cypress.env('relogio')}`)
+    cy.header_vivara()
+    cy.topbar_vivara()
+  })
 })
 
 describe('Deve validar o Header Vivara Lagado Front', () => {

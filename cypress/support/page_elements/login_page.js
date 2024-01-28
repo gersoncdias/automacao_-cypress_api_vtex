@@ -7,6 +7,8 @@ class loginPage {
       '[data-login-wrapper="true"] > [data-testid="store-link"]'
     this.user_info = '.vtex-my-account-1-x-userInfo'
     this.name_info = '.user'
+    this.title_life = '[title="Life by Vivara"]'
+    this.title_vivara = '.logoTop'
   }
 }
 module.exports = loginPage

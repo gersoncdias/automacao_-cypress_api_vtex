@@ -5,6 +5,8 @@ module.exports = defineConfig({
     experimentalRunAllSpecs: true,
     env: {
       hideXhr: true,
+      snapshotOnly: true,
+      hideCredentials: true,
     },
   },
   chromeWebSecurity: false,

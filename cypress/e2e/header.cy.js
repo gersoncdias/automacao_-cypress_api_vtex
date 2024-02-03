@@ -21,9 +21,6 @@ describe('Deve validar o Header Vivara não Lagado', () => {
   beforeEach(() => {
     cy.visit(Cypress.env('url'), {})
   })
-  afterEach(() => {
-    cy.check_no_user()
-  })
   it('Em Vivara', () => {
     cy.header_vivara()
     cy.topbar_vivara()

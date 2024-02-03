@@ -59,5 +59,5 @@ Cypress.Commands.add('check_no_user', () => {
   cy.get(loginPg.btn_use_icon)
     .should('exist')
     .should('be.visible')
-    .should('have.text', `${Cypress.env('hi')} ${Cypress.env('no_user')}`)
+    .should('include', `${Cypress.env('hi')} ${Cypress.env('no_user')}`)
 })

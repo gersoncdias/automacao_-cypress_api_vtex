@@ -1,9 +1,9 @@
 import './commands/commands_home'
-import './commands/commands_montesp'
 import './commands/commands_header'
 import './commands/commands_footer'
 import './commands/commands_login'
 import './commands/commands_validate'
+import './commands/commands_account'
 import 'cypress-plugin-api'
 
 require('cypress-plugin-xhr-toggle')

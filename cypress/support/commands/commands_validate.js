@@ -1,15 +1,16 @@
+const env = Cypress.env()
+
 Cypress.Commands.add('generateAndValidateToken', (username, password) => {
-  cy.api({
+  cy.request({
     method: 'POST',
-    url: 'https://secure.vivara.com.br/api/vtexid/pub/authentication/startlogin',
+    url: `${env.url_api}/pub/authentication/startlogin`,
     headers: {},
     form: true,
     body: {
       accountName: 'lojavivara',
       scope: 'lojavivara',
-      returnUrl: 'https://secure.vivara.com.br/',
-      callbackUrl:
-        'https://secure.vivara.com.br/api/vtexid/oauth/finish?popup=false',
+      returnUrl: env.url,
+      callbackUrl: `${env.url_api}/oauth/finish?popup=false`,
       user: username,
       fingerprint: '',
     },
@@ -18,9 +19,9 @@ Cypress.Commands.add('generateAndValidateToken', (username, password) => {
       .find((cookie) => cookie.startsWith('_vss='))
       .split(';')[0]
 
-    cy.api({
+    cy.request({
       method: 'POST',
-      url: 'https://secure.vivara.com.br/api/vtexid/pub/authentication/classic/validate',
+      url: `${env.url_api}/pub/authentication/classic/validate`,
       headers: {
         Cookie: `VtexIdclientAutCookie_lojavivara=${vssCookie}`,
       },

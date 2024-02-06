@@ -1,7 +1,7 @@
 const user = Cypress.env('user_name')
 const password = Cypress.env('user_password')
 
-describe('Deve validar o Header Lagado API', () => {
+describe.only('Deve validar o Header Lagado API', () => {
   beforeEach(() => {
     cy.session('authenticatedSession', () => {
       cy.generateAndValidateToken(user, password).then((authToken) => {
@@ -26,15 +26,8 @@ describe('Deve validar o Header Lagado API', () => {
     cy.topbar_vivara()
   })
 })
-describe.only('Deve validar o Header Vivara não Lagado', () => {
+describe('Deve validar o Header Vivara não Lagado', () => {
   beforeEach(() => {
-    Cypress.on('before:browser:launch', (browser, launchOptions) => {
-      if (browser.name === 'chrome') {
-        launchOptions.args.push('--use-fake-ui-for-media-stream')
-        launchOptions.args.push('--use-fake-device-for-media-stream')
-      }
-      return launchOptions
-    })
     cy.visit(Cypress.env('url'), {})
   })
   it('Em Vivara', () => {

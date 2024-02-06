@@ -7,6 +7,7 @@ class loginPage {
       '[data-login-wrapper="true"] > [data-testid="store-link"]'
     this.user_info = '.vtex-my-account-1-x-userInfo'
     this.name_info = '.user'
+    this.login_info = '[data-login-wrapper="true"] > [data-testid="store-link"]'
     this.title_life = '[title="Life by Vivara"]'
     this.title_vivara = '.logoTop'
   }

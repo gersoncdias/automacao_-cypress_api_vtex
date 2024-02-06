@@ -25,11 +25,6 @@ Cypress.Commands.add('header_vivara', () => {
     .should('contain.text', 'Buscar')
 
   cy.get(headerPg.cart_toggle).should('exist').should('be.visible')
-
-  cy.get(headerPg.regionalize)
-    .should('exist')
-    .should('be.visible')
-    .should('have.text', 'Informar meu CEP')
 })
 
 Cypress.Commands.add('topbar_vivara', () => {

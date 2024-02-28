@@ -1,7 +1,7 @@
 const env = Cypress.env()
 
 Cypress.Commands.add('generateAndValidateToken', (username, password) => {
-  cy.request({
+  cy.api({
     method: 'POST',
     url: `${env.url_api}/pub/authentication/startlogin`,
     headers: {},
@@ -19,7 +19,7 @@ Cypress.Commands.add('generateAndValidateToken', (username, password) => {
       .find((cookie) => cookie.startsWith('_vss='))
       .split(';')[0]
 
-    cy.request({
+    cy.api({
       method: 'POST',
       url: `${env.url_api}/pub/authentication/classic/validate`,
       headers: {

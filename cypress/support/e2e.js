@@ -5,6 +5,7 @@ import './commands/commands_login'
 import './commands/commands_validate'
 import './commands/commands_account'
 import 'cypress-plugin-api'
+import '@shelex/cypress-allure-plugin'
 
 require('cypress-plugin-xhr-toggle')
 
